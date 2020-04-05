@@ -1,0 +1,17 @@
+.author-social-links {
+  ul {
+    display: inline-flex;
+    li {
+      margin: auto 7px;
+      a {
+        transition: all 0.1s ease-out;
+        color: $dark-gray;
+        &.instagram:hover {color: #e9584e;}
+        &.facebook:hover {color: #4267b2;}
+        &.twitter:hover {color: #38a1f3;}
+        &.google:hover {color: #dd4b39;}
+        &.linkedin:hover {color: #0077b5;}
+      }
+    }
+  }
+}

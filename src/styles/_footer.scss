@@ -1,0 +1,23 @@
+.site-footer {
+  background-color: $white;
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  .footer-social-links {
+    text-align: center;
+    ul.social-links-list {
+      li {
+        margin-right: 25px;
+        display: inline-block;
+        a {
+          color: $dark-gray;
+          &.instagram:hover {color: #e95950;}
+          &.facebook:hover {color: #4267b2;}
+          &.twitter:hover {color: #38a1f3;}
+          &.google:hover {color: #dd4b39;}
+          &.linkedin:hover {color: #0077b5;}
+        }
+      }
+    }
+  }
+}
