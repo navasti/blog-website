@@ -4,6 +4,10 @@ date: 2020-01-04 09:00:00
 author: 'John Doe'
 path: '/first-post'
 image: ../../images/introduction.png
+tags: 
+- code
+- web development
+- introduction
 ---
 
 Welcome to my Blog Website, I hope you enjoy it.

@@ -4,6 +4,10 @@ date: 2020-01-18 09:00:00
 author: 'John Doe'
 path: '/third-post'
 image: ../../images/css.jpg
+tags: 
+- css
+- design
+- styles
 ---
 
 Hello! Today's topis will be CSS and its frameworks.
