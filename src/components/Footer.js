@@ -1,10 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { library } from '@fortawesome/fontawesome-svg-core'
 import { faFacebook, faInstagram, faGithub, faPinterest, faTwitter } from '@fortawesome/free-brands-svg-icons'
-// import { faFacebook } from '@fortawesome/free-solid-svg-icons'
-
-// library.add(faFacebook)
 
 const Footer = () => (
     <div className="site-footer">

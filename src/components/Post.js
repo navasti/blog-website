@@ -4,15 +4,15 @@ import Img from 'gatsby-image'
 import { Badge, Card, CardTitle, CardText, CardSubtitle, CardBody } from 'reactstrap'
 import { slugify } from '../util/utilityFunctions'
 
-const Post = ({ title, author, path, date, body, fluid, tags }) => {
+const Post = ({ title, author, slug, date, body, fluid, tags }) => {
     return (
         <Card>
-            <Link to={path}>
+            <Link to={slug}>
                 <Img className="card-image-top" fluid={fluid}/>
             </Link>
             <CardBody>
                 <CardTitle>
-                    <Link to={path} style={{color: 'black', fontWeight: 'bold'}}>{title}</Link>
+                    <Link to={slug} style={{color: 'black', fontWeight: 'bold'}}>{title}</Link>
                 </CardTitle>
                 <CardSubtitle style={{marginBottom: '10px'}}>
                     <span className="text-info">{date}</span><br />
@@ -21,7 +21,7 @@ const Post = ({ title, author, path, date, body, fluid, tags }) => {
                 <CardText>{body}</CardText>
                 <ul className="post-tags">
                     {tags.map(tag => (
-                        <li>
+                        <li key={tag}>
                             <Link to={`/tag/${slugify(tag)}`}>
                                 <Badge style={{padding: '5px 8px', fontWeight: '200', fontSize: '13px'}} color="primary">
                                     {tag}
@@ -30,7 +30,7 @@ const Post = ({ title, author, path, date, body, fluid, tags }) => {
                         </li>
                     ))}
                 </ul>
-                <Link to={path} className="btn btn-outline-primary float-right">Read more</Link>
+                <Link to={slug} className="btn btn-outline-primary float-right">Read more</Link>
             </CardBody>
         </Card>
     )

@@ -2,7 +2,6 @@
 title: 'Second Post - HTML'
 date: 2020-01-11 09:00:00
 author: 'John Doe'
-path: '/second-post'
 image: ../../images/html.jpg
 tags: 
 - seo

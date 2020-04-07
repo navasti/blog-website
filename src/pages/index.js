@@ -15,10 +15,11 @@ const IndexPage = () => (
         <StaticQuery query={indexQuery} render={data => (
           <div>
             {data.allMarkdownRemark.edges.map(({ node }) => (
-              <Post 
+              <Post
+                key={node.id}
                 title={node.frontmatter.title}
                 author={node.frontmatter.author}
-                path={node.frontmatter.path}
+                slug={node.fields.slug}
                 date={node.frontmatter.date}
                 tags={node.frontmatter.tags}
                 body={node.excerpt}
@@ -46,7 +47,6 @@ const indexQuery = graphql`
             title
             date(formatString: "MMM Do YYYY")
             author
-            path
             tags
             image{
               childImageSharp{
@@ -55,6 +55,9 @@ const indexQuery = graphql`
                 }
               }
             }
+          }
+          fields{
+            slug
           }
           excerpt
         }
