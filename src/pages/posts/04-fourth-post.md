@@ -1,12 +1,11 @@
 ---
-title: 'Fourth Post - JavaScript'
+title: 'Fourth Post: JavaScript'
 date: 2020-01-24 09:00:00
 author: 'Jane Doe'
 image: ../../images/javascript.jpg
 tags: 
 - javascript
 - code
-- objected
 - programming
 ---
 

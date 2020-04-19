@@ -1,5 +1,5 @@
 ## Blog Website
-This project is a website about popular travel destinations whitch was written in React.
+This project is a blog website template.
 
 ## Preview
 https://navasti.github.io/blog-website/

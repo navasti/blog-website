@@ -10,9 +10,9 @@ const tagsPage = ({ pageContext }) => {
     return (
         <Layout pageTitle="All tags">
             <SEO title="All tags" keywords={['tags, topic']}/>
-            <ul>
+            <ul style={{ marginBottom: '25px' }}>
                 {tags.map(tag=>(
-                    <li key={tag} style={{ float: 'left', margin: '0 10px 10px 0' }}>
+                    <li key={tag} style={{ display: 'inline-block', margin: '0 10px 10px 0' }}>
                         <Button color="primary" href={`/tag/${slugify(tag)}`}>
                             {tag}: {tagPostCounts[tag]}
                         </Button>

@@ -1,5 +1,5 @@
 ---
-title: 'Third Post - CSS'
+title: 'Third Post: CSS'
 date: 2020-01-18 09:00:00
 author: 'John Doe'
 image: ../../images/css.jpg

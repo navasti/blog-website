@@ -57,7 +57,7 @@ const Sidebar = ({ author, authorFluid }) => (
                     <FormGroup>
                         <Input type="email" name="email" placeholder="Your email address..."/>
                     </FormGroup>
-                    <Button className="btn-outline-primary text-uppercase" color="white">
+                    <Button className="btn-outline-primary text-uppercase" color="white" onClick={e=>e.preventDefault()}>
                         Subscribe
                     </Button>
                 </Form>
@@ -85,7 +85,7 @@ const Sidebar = ({ author, authorFluid }) => (
                                 </Link>
                                 <CardBody>
                                     <CardTitle>
-                                        <Link to={node.frontmatter.path}>
+                                        <Link to={node.fields.slug}>
                                             {node.frontmatter.title}
                                         </Link>
                                     </CardTitle>
