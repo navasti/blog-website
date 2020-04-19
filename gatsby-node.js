@@ -21,6 +21,7 @@ exports.createPages = ({ actions, graphql }) => {
         singlePost: path.resolve('src/templates/single-post.js'),
         tagsPage: path.resolve('src/templates/tags-page.js'),
         tagPost: path.resolve('src/templates/tag-post.js'),
+        authorPosts: path.resolve('src/templates/author-posts.js'),
         postList: path.resolve('src/templates/post-list.js')
     }
 
@@ -92,15 +93,13 @@ exports.createPages = ({ actions, graphql }) => {
             })
         })
 
+        // Pagination
         const postsPerPage = 2;
         const numberOfPages = Math.ceil(posts.length / postsPerPage);
-
         Array.from({ length: numberOfPages }).forEach((_, index)=>{
             const isFirstPage = index === 0
             const currentPage = index + 1
-
             if(isFirstPage) return
-
             createPage({
                 path: `/page/${currentPage}`,
                 component: templates.postList,
@@ -109,6 +108,18 @@ exports.createPages = ({ actions, graphql }) => {
                     skip: index * postsPerPage,
                     currentPage,
                     numberOfPages
+                }
+            })
+        })
+
+        // Create author page
+        authors.forEach(author=>{
+            createPage({
+                path: `/author/${slugify(author.name)}`,
+                component: templates.authorPosts,
+                context: {
+                    authorName: author.name,
+                    imageUrl: author.imageUrl
                 }
             })
         })
