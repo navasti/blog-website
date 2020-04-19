@@ -7,6 +7,7 @@ tags:
 - seo
 - html
 - code
+- semantic
 ---
 
 Hi there! Today's topis will be HTML.

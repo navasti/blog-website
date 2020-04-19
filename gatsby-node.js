@@ -94,7 +94,7 @@ exports.createPages = ({ actions, graphql }) => {
         })
 
         // Pagination
-        const postsPerPage = 2;
+        const postsPerPage = 3;
         const numberOfPages = Math.ceil(posts.length / postsPerPage);
         Array.from({ length: numberOfPages }).forEach((_, index)=>{
             const isFirstPage = index === 0
