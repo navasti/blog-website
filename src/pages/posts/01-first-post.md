@@ -7,7 +7,6 @@ tags:
 - code
 - web development
 - introduction
-- programming
 ---
 
 Welcome to my Blog Website, I hope you enjoy it.

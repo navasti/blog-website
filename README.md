@@ -22,6 +22,12 @@ gatsby develop
 * reacstrap & SCSS
 * FontAwesome Icons
 
+## Added plugins
+* disqus-react
+* gatsby-plugin-sass
+* gatsby-plugin-catch-links
+* gatsby-transformer-remark
+
 ## Used Images
 * https://pixabay.com/
 * https://www.pexels.com/
